@@ -1,0 +1,12 @@
+$output-bourbon-deprecation-warnings: false;
+@import "mixin";
+@import "base";
+@import "buttons";
+@import "sprite";
+
+
+.main-menu{
+	a{
+		color: #000;
+	}
+}

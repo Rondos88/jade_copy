@@ -1,0 +1,7 @@
+@import "bourbon";
+
+@include font-face("myriadpro-black", "../fonts/myriadpro-black/myriadpro-black", $file-formats: eot woff ttf svg);
+@include font-face("myriadpro-bold", "../fonts/myriadpro-bold/myriadpro-bold", $file-formats: eot woff ttf svg);
+@include font-face("myriadpro-regular", "../fonts/myriadpro-regular/myriadpro-regular", $file-formats: eot woff ttf svg);
+@include font-face("myriadpro-semibold", "../fonts/myriadpro-semibold/myriadpro-semibold", $file-formats: eot woff ttf svg);
+@include font-face("myriadpro-light", "../fonts/myriadpro-light/myriadpro-light", $file-formats: eot woff ttf svg);

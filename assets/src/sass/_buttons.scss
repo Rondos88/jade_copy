@@ -1,0 +1,115 @@
+@import "sprite";
+
+.btn {
+	padding: 0 30px;
+	border-radius: 0;
+	outline: none;
+	border: none;
+	display: inline-block;
+	line-height: 38px;
+	&:focus,
+	&:hover,
+	&:active {
+		outline: none;
+		text-decoration: none;
+		box-shadow: none;
+	}
+	&:active {
+		box-shadow: none;
+	}
+}
+
+.btn-orange {
+	@include rr;
+	color: #ffffff;
+	font-size: 18px;
+	height: 58px;
+	line-height: 60px;
+	padding: 0 26px;
+	border: 0;
+	border-radius: 29px;
+	text-transform: uppercase;
+	background-color: $accent;
+	transition: background-color 0.4s ease-in-out;
+	position: relative;
+	white-space: nowrap;
+	&:hover {
+		background-color: #ff982a;
+		color: #ffffff;
+	}
+	&:active{
+		background-color: #c36500;
+	}
+	.btn-icon{
+		display: inline-block;
+		position: relative;
+		margin-right: 12px;
+		vertical-align: middle;
+		&.key-icon{
+			@include sprite($keys-w);
+		}
+	}
+}
+
+.btn-white {
+	@include rb;
+	color: $base;
+	font-size: 16px;
+	height: 50px;
+	line-height: 50px;
+	padding: 0 26px;
+	border: 0;
+	border-radius: 29px;
+	text-transform: uppercase;
+	background-color: #ffffff;
+	transition: background-color 0.4s ease-in-out;
+	position: relative;
+	white-space: nowrap;
+	min-width: 168px;
+	&:focus {
+		color: $base;
+		outline: none;
+	}
+	&:hover {
+		background-color: $gray;
+		color: #ffffff;
+	}
+	&:active{
+		background-color: #c36500;
+	}
+}
+
+.btn-transparent {
+	@include rr;
+	color: $base;
+	font-size: 18px;
+	height: 58px;
+	line-height: 60px;
+	padding: 0 5px;
+	border: 0;
+	border-radius: 29px;
+	text-transform: uppercase;
+	background-color: transparent;
+	position: relative;
+	white-space: nowrap;
+	transition: color 0.4s ease-in-out;
+	&:focus {
+		color: $base;
+		outline: none;
+	}
+	&:hover {
+		color: #ff982a;
+	}
+	&:active{
+		color: #c36500;
+	}
+	.btn-icon{
+		display: inline-block;
+		position: relative;
+		margin-right: 12px;
+		vertical-align: middle;
+		&.user-icon{
+			@include sprite($user-check-o);
+		}
+	}
+}

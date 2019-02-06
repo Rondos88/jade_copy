@@ -1,0 +1,65 @@
+@mixin rbl {
+	font-family: "myriadpro-black";
+}
+
+@mixin rb {
+	font-family: "myriadpro-bold";
+}
+
+@mixin rr {
+	font-family: "myriadpro-regular";
+}
+
+@mixin rsb {
+	font-family: "myriadpro-semibold";
+}
+
+@mixin rl {
+	font-family: "myriadpro-light";
+}
+
+@mixin noselect {
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Chrome/Safari/Opera */
+	-khtml-user-select: none; /* Konqueror */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none;
+	/* Non-prefixed version, currently
+												 not supported by any browser */
+}
+
+@mixin select {
+	appearance: none !important;
+	-webkit-appearance: none !important;
+	-moz-appearance: none !important;
+	-ms-appearance: none !important;
+	-o-appearance: none !important;
+}
+
+@mixin break {
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+}
+
+@mixin text-overflow {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+@mixin alignTransform {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@mixin alignTransformHorizontal {
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+@mixin alignTransformVertical {
+	top: 50%;
+	transform: translateY(-50%);
+}

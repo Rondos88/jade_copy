@@ -1,0 +1,19 @@
+extend template
+
+block title
+    //-Title страницы
+    title About
+
+prepend css
+    //-Тут можно указать CSS которые должны быть только на этой странице
+    +styles("css/any.css","css/any2.css")
+
+prepend body
+    -var bodyClass = "about-page"
+
+block content
+    //-Контент страницы
+    .container: .row: .col-xl-12
+        +section_heading(lang_about1,"test mod")(data-item="test")
+        p.test=lang_about2
+        - $pageTitle

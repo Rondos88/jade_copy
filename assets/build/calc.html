@@ -1,0 +1,189 @@
+<form class="form-calculator">
+    <div class="row">
+        <div class="col-xl-7 col-lg-12 col-sm-6">
+            <div class="form-calculator__title">Calculator</div>
+            <div class="form-calculator__item">
+                <label class="form-calculator__label">
+                    <span class="currency-symbol">USD</span>
+                    <input type="text"
+                           name="amount"
+                           data-min="0.005"
+                           data-max="3"
+                           data-period="40"
+                           data-percent="3.5"
+                           class="form-calculator__input"
+                           placeholder="Amount"
+                    >
+                </label>
+            </div>
+            <div class="form-calculator__item">
+                <label class="form-calculator__label">
+                    <span class="currency-symbol">%</span>
+                    <input type="text"
+                           name="compound"
+                           class="form-calculator__input"
+                           placeholder="Compounding 1-100"
+                    >
+                </label>
+            </div>
+        </div>
+        <div class="col-xl-5 col-lg-12 col-sm-6">
+            <div class="result-block">
+
+                <div class="result-block-item">
+                    <div class="result-block-item__inner">
+                        <div class="result-block-item__title">Total profit:</div>
+                        <div class="result-block-item__value color--yellow">0.00000000USD
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<form class="form-calculator">
+    <div class="row">
+        <div class="col-xl-7 col-lg-12 col-sm-6">
+            <div class="form-calculator__title">Calculator</div>
+            <div class="form-calculator__item">
+                <label class="form-calculator__label">
+                    <span class="currency-symbol">USD</span>
+                    <input type="text"
+                           name="amount"
+
+                           data-min="3"
+                           data-max="50"
+                           data-period="35"
+                           data-percent="4.7"
+                           class="form-calculator__input"
+                           placeholder="Amount">
+                </label>
+            </div>
+            <div class="form-calculator__item">
+                <label class="form-calculator__label">
+                    <span class="currency-symbol">%</span>
+                    <input type="text"
+                           name="compound"
+                           class="form-calculator__input"
+                           placeholder="Compounding 1-100"
+                    >
+                </label>
+            </div>
+        </div>
+        <div class="col-xl-5 col-lg-12 col-sm-6">
+            <div class="result-block">
+
+                <div class="result-block-item">
+                    <div class="result-block-item__inner">
+                        <div class="result-block-item__title">Total profit:</div>
+                        <div class="result-block-item__value color--yellow">0.00000000USD
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<script src="libs/jquery/dist/jquery.min.js"></script>
+<script>
+    $(function () {
+
+// home plan calc
+
+        function startFunction(amountItem,compItem, base){
+            var amount_item;
+            var amount;
+            var typed_amount;
+            var compounding;
+            var min_amount;
+            var max_amount;
+            var profit;
+
+
+            amount_item = amountItem;
+            var str = amount_item.val();
+            amount = str.replace(",", ".");
+            amount = Number(amount);
+            typed_amount = amount;
+            var compounding_item = compItem;
+            compounding = parseFloat(compounding_item.val());
+
+            if(base == 'compound'){
+                if(compounding > 100){
+                    compounding = 100;
+                    compounding_item.val(compounding);
+                }
+            } else{
+                if(isNaN(compounding)){
+                    compounding = 0;
+                    compounding_item.val(compounding);
+                }
+            }
+
+
+            min_amount = amount_item.data('min');
+            max_amount = amount_item.data('max');
+
+            if(isNaN(amount)){
+                amount = min_amount;
+                amount_item.val(amount);
+            }
+            if(base =='amount'){
+                if (amount > max_amount){
+                    amount = max_amount;
+                    typed_amount = max_amount;
+                    amount_item.val(amount);
+                }
+            }
+
+            if (amount >= min_amount && amount <= max_amount){
+                var percent = amount_item.data('percent');
+                var period = amount_item.data('period');
+                if(compounding == 0){
+                    amount = (amount/100*percent)*period;
+                } else {
+                    var daily_profit;
+                    var daily_percent;
+                    var reinvest_amount;
+                    var total=0;
+                    var i;
+                    for (i = 0; i < period; i++) {
+
+                        daily_percent = (amount/100*percent);
+                        reinvest_amount = daily_percent / 100 * compounding + amount;
+                        daily_profit = daily_percent / 100 * (100-compounding);
+                        total = total + daily_profit;
+                        amount = reinvest_amount;
+                        var last_item = period - 1;
+                        if(i == last_item){
+                            total = total + (reinvest_amount - typed_amount);
+                            amount = total;
+                        }
+                    }
+                }
+                profit = amount;
+            } else {
+                profit = 0;
+            }
+            if(isNaN(compounding)){
+                profit = 0;
+            }
+            profit = profit.toFixed(8);
+            amountItem.closest('.form-calculator').find('.result-block-item:last-child .result-block-item__value').text(profit+'Ƀ');
+        }
+
+        $('.form-calculator input[name="amount"]').on('keyup change', function(){
+            var amountItem = $(this);
+            var compItem = $(this).closest('.form-calculator').find('input[name="compound"]');
+            var base = 'amount';
+            startFunction(amountItem,compItem,base);
+        });
+
+        $('.form-calculator input[name="compound"]').on('keyup change', function(){
+            var amountItem = $(this).closest('.form-calculator').find('input[name="amount"]');
+            var compItem = $(this);
+            var base = 'compound';
+            startFunction(amountItem,compItem,base);
+        });
+    });
+</script>

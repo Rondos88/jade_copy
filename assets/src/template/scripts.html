@@ -1,0 +1,99 @@
+<script src="libs/jquery/dist/jquery.min.js"></script>
+<script src="libs/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+<script src="js/main.js"></script>
+<script src="libs/slick/slick.min.js"></script>
+<script src="libs/moment/min/moment-with-locales.min.js"></script>
+<script src="libs/moment-timezone/moment-timezone.js"></script>
+<script src="libs/moment/global.js"></script>
+<script src="libs/ResponsiveTables/ng_responsive_tables.js"></script>
+<script src="libs/clipboard.js/clipboard.min.js"></script>
+<script src="libs/bootstrap-sweetalert/sweetalert.min.js"></script>
+<script src="libs/aos/aos.js"></script>
+<script src="libs/liMarquee/jquery.liMarquee.js"></script>
+<script src="libs/jQueryFormStyler/jquery.formstyler.min.js"></script>
+<script src="libs/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script src="libs/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+<script src="libs/jquery-circle-progress/circle-progress.min.js"></script>
+<script src="libs/circliful/jquery.circliful.min.js"></script>
+<script src="libs/jquery.nicescroll/jquery.nicescroll.min.js"></script>
+
+<script src="js/common.js"></script>
+<script src="js/calc.js"></script>
+<script>
+    $(function () {
+        /*There set language 'ru' or 'en' for website locales*/
+        moment.locale('en');
+        //select
+        setTimeout(function() {
+            $('select').styler({
+                locale:'en'
+            });
+        }, 100);
+
+        /*start currencies animation*/
+        setInterval(function() {
+            $('.marquee-line .marquee-item').each(function(){
+                var item = $(this).find('.marquee-item__icon');
+                item.removeClass('arrow--up');
+                item.removeClass('arrow--down');
+                item.addClass('arrow--up');
+                item.next().addClass('animate');
+                setTimeout(function () {
+                    item.next().removeClass('animate');
+                },3000);
+            });
+        }, 6000);
+        setInterval(function() {
+            $('.marquee-line .marquee-item').each(function(){
+                var item = $(this).find('.marquee-item__icon');
+                item.removeClass('arrow--up');
+                item.removeClass('arrow--down');
+                item.addClass('arrow--down');
+                item.next().addClass('animate');
+                setTimeout(function () {
+                    item.next().removeClass('animate');
+                },3000);
+            });
+        }, 18000);
+        /*end currencies animation*/
+
+        //clipboard localisations
+        var clip1 = new Clipboard('.promo-btn');
+
+        function bannerLink(id) {
+            id.on('success', function (e) {
+                swal({
+                    title: "Link copied",
+                    text: "You can paste text that has been copied by pressing Ctrl + V. The text that was copied last will be pasted.",
+                    type: "success",
+                    showCancelButton: false,
+                    confirmButtonClass: "btn-success",
+                    confirmButtonText: "OK!",
+                    closeOnConfirm: false,
+                    closeOnCancel: false
+                });
+            });
+        }
+
+        bannerLink(clip1);
+
+        var affil1 = new Clipboard('#affiliater1');
+
+        function affiliatelink(id) {
+            id.on('success', function (e) {
+                swal({
+                    title: "Your referral link copied!",
+                    text: "You can paste text that has been copied by pressing Ctrl + V. The text that was copied last will be pasted.",
+                    type: "success",
+                    showCancelButton: false,
+                    confirmButtonClass: "btn-success",
+                    confirmButtonText: "OK!",
+                    closeOnConfirm: false,
+                    closeOnCancel: false
+                });
+            });
+        }
+
+        affiliatelink(affil1);
+    });
+</script>

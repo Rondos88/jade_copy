@@ -1,0 +1,697 @@
+@import "bourbon";
+@import "mixin";
+
+@media only screen and (max-width : 1770px){
+	.cabinet-content{
+		&.shift{
+			transform: translateX(280px);
+			&:before{
+				z-index: 50;
+				opacity: 1;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width : 1550px){
+	.referral-block{
+		left: -200px;
+		box-shadow: none;
+		&.open{
+			left: 0;
+			box-shadow: 0 0 49px rgba(0,0,0,0.5);
+		}
+	}
+	.referrals-btn{
+		visibility: visible;
+		&.shift{
+			left: 200px;
+		}
+	}
+}
+
+@media only screen and (max-width : 1199px){
+	body{
+		font-size: 15px;
+	}
+	.wallet-balance-item{
+		width: 50%;
+	}
+	.user-wallet-balance {
+		flex-wrap: wrap;
+	}
+	.user-wallet-balance-title {
+		text-align: center;
+		width: 100%;
+	}
+	.user-wallet-list {
+		justify-content: center;
+	}
+	.user-wallet-list-wrap {
+		width: 100%;
+	}
+	.user-data-item {
+		text-align: right;
+	}
+	.header-cabinet-top {
+		padding: 40px 0 10px;
+	}
+	.form-withdraw__item{
+		width: 50%;
+	}
+	.form-setting .select-group__item:first-child {
+		width: 30%;
+	}
+	.form-setting .select-group__item:nth-child(2) {
+		width: 40%;
+	}
+	.form-setting .select-group__item:nth-child(3) {
+		width: 30%;
+	}
+	.graph-description__list {
+		width: 100%;
+		ul{
+			justify-content: center;
+		}
+	}
+	.graph-description {
+		justify-content: center;
+	}
+	.tabs-nav-item {
+		font-size: 1em;
+		padding: 10px 15px 10px;
+	}
+	.partners-block-percent {
+		width: 200px;
+		height: 200px;
+		top: 70px;
+		padding: 70px 10px 20px;
+	}
+	.partners-block {
+		padding-right: 220px;
+	}
+	.partners-block:nth-child(2n) {
+		padding-right: 0;
+		padding-left: 220px;
+	}
+	.form-calculator__label {
+		width: 50%;
+	}
+	.invest-steps-item{
+		margin-bottom: 15px;
+	}
+	.invest-steps-item__inner {
+		padding-left: 0;
+		padding-top: 70px;
+	}
+	.invest-steps-item:nth-child(2n) .invest-steps-item__inner {
+		padding-left: 0;
+		padding-right: 0;
+		padding-top: 70px;
+	}
+	.invest-steps-item__icon {
+		top: 0;
+		transform: none;
+	}
+	.tariff-tabs-wrap {
+		width: 100%;
+		margin-bottom: 50px;
+	}
+	.tariff-calculator {
+		width: 100%;
+		max-width: 330px;
+		margin: 0 auto;
+		padding: 0 15px;
+	}
+	.process-item:nth-child(3) .process-item__img {
+		width: 550px;
+		top: 100px;
+	}
+	.process-item__img{
+		top: 193px;
+	}
+	.process-item:nth-child(2) .process-item__img {
+		width: 360px;
+	}
+	.process-item:nth-child(4) .process-item__img {
+		width: 360px;
+	}
+	.deposit-block__col {
+		width: 50%;
+	}
+	.form-filter__button {
+		text-align: center;
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width : 991px){
+	body{
+		font-size: 14px;
+	}
+	.main-menu a {
+		font-size: 0.86em;
+	}
+	.wallet-balance-card__logo {
+		text-align: center;
+	}
+	.wallet-balance-card__balance {
+		text-align: center;
+	}
+	.footer-cabinet-content {
+		text-align: center;
+		.social-button.footer--social {
+			text-align: center;
+		}
+	}
+	.header-top {
+		justify-content: center;
+	}
+	.header-top-separate {
+		display: none;
+	}
+	.main-menu a {
+		padding: 20px 2px 5px;
+		min-height: 50px;
+	}
+	.payment-system__list {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.footer-left::before {
+		right: auto;
+		@include alignTransformHorizontal;
+	}
+	.footer-right::before {
+		@include alignTransformHorizontal;
+	}
+	.footer-left {
+		padding: 30px 0;
+	}
+	.footer-right {
+		padding: 30px 0;
+	}
+	.footer-support-wrap {
+		padding: 20px 0;
+	}
+	.footer-text {
+		padding: 10px 0;
+	}
+	.faq-tabs-nav {
+		justify-content: center;
+	}
+	.tabs-nav-item {
+		padding: 5px;
+	}
+	.partners-list {
+		flex-wrap: wrap;
+	}
+	.partners-item {
+		width: 50%;
+		&:nth-child(2){
+			.partners-item__number::before {
+				display: none;
+			}
+		}
+	}
+	.invest-steps-composition {
+		display: none;
+	}
+	.invest-steps-item {
+		padding: 0 15px 15px 15px;
+	}
+	.invest-steps-item:nth-child(2n) {
+		padding: 0 15px 15px 15px;
+	}
+	.invest-steps-item:nth-child(3) {
+		padding-right: 15px;
+	}
+	.invest-steps-item__inner {
+		padding-left: 85px;
+		padding-top: 0;
+	}
+	.invest-steps-item:nth-child(2n) .invest-steps-item__inner {
+		padding-left: 0;
+		padding-right: 85px;
+		padding-top: 0;
+	}
+	.tariff-tabs .tariff-tabs-nav {
+		width: 100%;
+	}
+	.tariff-tabs .tabs__content {
+		width: 100%;
+		margin-bottom: 30px;
+	}
+	.tariff-tabs .tabs__caption {
+		margin: 0 auto 0 auto;
+	}
+	.about-composition__img {
+		right: -91px;
+		width: 100%;
+	}
+	.about-composition__list {
+		width: 100%;
+	}
+	.statistic-list {
+		padding-top: 0;
+	}
+	.table-statistic {
+		margin-bottom: 50px;
+	}
+	.table-statistic td {
+		padding: 20px 5px;
+	}
+	.process-item:nth-child(3) .process-item__img {
+		width: 508px;
+	}
+	.process-item__title {
+		font-size: 1em;
+	}
+	.form-filter-block {
+		margin: 0 auto 10px;
+		width: 100%;
+		text-align: center;
+	}
+	.affiliater-block__left {
+		width: 100%;
+	}
+	.affiliater-block__right {
+		width: 100%;
+		border-left: none;
+	}
+	.affiliater-block__button {
+		text-align: center;
+	}
+	.partners-user-info-item {
+		max-width: 360px;
+		width: 100%;
+		margin: 0 auto 10px;
+		height: auto;
+	}
+	.ref-total-info-item {
+		height: auto;
+		margin-bottom: 15px;
+		max-width: 380px;
+		width: 100%;
+		margin: 0 auto 10px;
+	}
+	.referrals-tabs__title {
+		width: 100%;
+		text-align: center;
+		padding: 0;
+	}
+	.referrals-tabs .tabs__caption {
+		width: 100%;
+		text-align: center;
+	}
+	.referrals-tabs {
+		display: block;
+	}
+}
+
+@media only screen and (max-width : 767px){
+	.header-main{
+		.btn-mobile-menu{
+			display: block;
+		}
+	}
+	.wallet-balance-item{
+		width: 100%;
+	}
+	.user-info{
+		text-align: center;
+		margin-bottom: 4px;
+	}
+	.user-data-item {
+		text-align: center;
+	}
+	.form-withdraw__item{
+		width: 100%;
+	}
+	.main-menu-line{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+		padding: 80px 0 40px;
+		background-color: #ffffff;
+		z-index: 100;
+		transition: transform 0.4s ease-in-out;
+		transform: translate(0, -600px) scale(0);
+		&.open{
+			opacity: 1;
+			transform: translate(0, 0) scale(1);
+		}
+	}
+	.main-menu{
+		ul{
+			display: block;
+			li{
+				display: block;
+				text-align: center;
+				&:before, &:after{
+					display: none;
+				}
+				&.active{
+					a{
+						background-color: transparent;
+						color: $accent;
+						&:before{
+							width: 100%;
+						}
+					}
+				}
+			}
+			a{
+				font-size: 16px;
+				display: inline-block;
+				color: $base;
+				min-height: 10px;
+				padding: 10px 0;
+				transition: all 0.4s ease-in-out;
+				position: relative;
+				&:before{
+					content: '';
+					position: absolute;
+					bottom: 3px;
+					left: 0;
+					width: 0;
+					height: 1px;
+					background-color: $accent;
+					transition: all 0.4s ease-in-out;
+				}
+				&:hover{
+					color: $accent;
+					background-color: transparent;
+				}
+			}
+		}
+	}
+	.logo-wrap.header--logo{
+		width: 200px;
+		margin-bottom: 20px;
+	}
+	.header-top {
+		padding-top: 45px;
+	}
+	.faq-tabs-nav {
+		padding-bottom: 10px;
+	}
+	.tabs-nav-item::before {
+		bottom: 0;
+		height: 2px;
+	}
+	.accordion-faq li {
+		padding: 12px 14px;
+	}
+	.partners-block {
+		padding-right: 0px;
+	}
+	.partners-block:nth-child(2n) {
+		padding-right: 0;
+		padding-left: 0px;
+	}
+	.partners-block-percent {
+		position: relative;
+		top: auto;
+		left: auto;
+		right: auto;
+		margin: 0 auto 25px;
+	}
+	.form-calculator__label {
+		width: 100%;
+	}
+	.invest-steps-item {
+		width: 100%;
+		min-height: 80px;
+	}
+	.tariff-tabs .tabs__caption {
+		margin: 0 5% 0 auto;
+	}
+	.table-statistic{
+		tr{
+			&:first-child{
+				display: none;
+			}
+		}
+		td:nth-child(3) {
+			padding: 12px 5%;
+		}
+		td .td-text {
+			text-align: right;
+		}
+		.statistic-logo {
+			margin: auto 0 auto auto;
+		}
+	}
+	.section-title {
+		font-size: 1.5em;
+	}
+	.process-item__img {
+		display: none;
+	}
+	.process-list-wrap {
+		.img-bg{
+			display: block;
+		}
+	}
+	.process-item:nth-child(3) .process-item__inner {
+		padding-top: 360px;
+	}
+	.process-item__inner {
+		min-height: 100px;
+	}
+	.process-item__title {
+		font-size: 0.8em;
+	}
+	.process-item {
+		width: 20% !important;
+	}
+	.history-block-item {
+		width: 100%;
+		text-align: center;
+		&:last-child{
+			width: 100%;
+		}
+	}
+	.affiliater-link__title {
+		width: 100%;
+		text-align: center;
+		padding: 5px 0;
+	}
+	.affiliater-link__value {
+		width: 100%;
+		text-align: center;
+		padding: 5px;
+	}
+	.affiliater-block__count {
+		width: 100%;
+	}
+	.affiliater-block__button {
+		width: 100%;
+	}
+	table.table-referrals td::before{
+		display: none;
+	}
+	table.table-referrals td .td-text {
+		float: none;
+		width: 100%;
+	}
+	.table-referrals .referral-name {
+		text-align: center;
+	}
+	.table-referrals .referrals-deposit {
+		text-align: center;
+	}
+	.header-composition {
+		margin: 0 auto 52px;
+	}
+}
+
+@media only screen and (max-width : 575px){
+	.project-date {
+		text-align: center;
+		padding: 8px 0;
+	}
+	.project-date__inner {
+		display: inline-block;
+	}
+	.cabinet-header-link {
+		justify-content: center;
+	}
+	.user-link-list {
+		flex-wrap: wrap;
+	}
+	.header-info {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.footer-support-item {
+		margin-bottom: 10px;
+	}
+	.footer-support-item__icon {
+		top: 5px;
+	}
+	.footer-support{
+		margin-bottom: 15px;
+	}
+	.footer-menu li {
+		margin-bottom: 10px;
+	}
+	.footer-menu {
+		border-left: 0;
+		padding-left: 0;
+	}
+	.copyright {
+		text-align: center;
+	}
+	.social-button.footer--social {
+		text-align: center;
+	}
+	.footer-support-wrap {
+		padding: 10px 0;
+	}
+	.logo-wrap.footer--logo {
+		width: 200px;
+	}
+	.form-support__title {
+		font-size: 1.9em;
+		padding: 16px 0 10px 78px;
+	}
+	.news-item__img {
+		display: inline-block;
+		position: relative;
+		margin-bottom: 10px;
+	}
+	.news-item__inner {
+		padding-left: 0;
+	}
+	.invest-plans__inner {
+		margin: 0 0 0 auto;
+	}
+	.statistic-item {
+		padding: 18px 10px 18px 10px;
+		min-height: 30px;
+	}
+	.statistic-item__title {
+		padding: 0 5px 0 40px;
+	}
+	.deposit-block__col {
+		width: 100%;
+	}
+	.deposit-block-item__top {
+		padding: 15px 10px 10px;
+		min-height: 50px;
+	}
+	.deposit-block-item__bottom {
+		padding: 10px 10px 10px;
+	}
+}
+
+@media only screen and (max-width : 480px){
+	.wallet-balance-card .button-group-item {
+		width: 100%;
+	}
+	.user-data-item {
+		width: 100%;
+	}
+	.user-data-item:nth-child(2) {
+		width: 100%;
+	}
+	.header-cabinet-top {
+		padding: 50px 0 10px;
+	}
+	.pay-wallet-item {
+		width: 100%;
+		label{
+			margin: 0 auto;
+		}
+	}
+	.form-withdraw .label-title {
+		text-align: center;
+	}
+	.form-withdraw__button {
+		text-align: center;
+	}
+	.form-setting__tabs .tabs__caption {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.referrals-btn{
+		span{
+			transform-origin: 50% 50%;
+			border-radius: 0 0 0 20px;
+			transform: rotate(-90deg) translate(-70px,-71px);
+			white-space: nowrap;
+		}
+	}
+	.tabs-nav-item {
+		width: 100%;
+		text-align: center;
+		&.active{
+			background: rgba($base, 0.15);
+			color: $base;
+		}
+	}
+	.partners-item {
+		width: 100%;
+		&__number{
+			&:before{
+				display: none;
+			}
+		}
+	}
+	.partners-block-percent {
+		width: 140px;
+		height: 140px;
+		padding: 55px 10px 20px;
+		span{
+			font-size: 3em;
+		}
+	}
+	.invest-plans__inner {
+		transform: scale(0.7) translateX(27px);
+	}
+	.invest-plans {
+		min-height: 400px;
+		padding: 70px 15px 50px;
+	}
+	.tariff-tabs .tabs__caption {
+		transform: scale(0.7) translateX(27px);
+	}
+	.tariff-tabs .tariff-tabs-nav {
+		min-height: 400px;
+		padding: 50px 15px 50px;
+	}
+	.tariff-calculator__label {
+		padding: 0 20px;
+	}
+	.form-filter__label{
+		width: 200px;
+		display: block;
+		margin: 0 auto 10px;
+	}
+	.history-block-top {
+		justify-content: center;
+		text-align: center;
+	}
+	.history-block-top .event-title {
+		padding-right: 0;
+		width: 100%;
+	}
+	.partners-user-info-item {
+		padding: 20px;
+	}
+	.ref-total-info-item {
+		padding: 16px;
+	}
+}
+
+@media only screen and (max-width : 320px){
+	
+}
+
+

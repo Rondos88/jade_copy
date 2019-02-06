@@ -1,0 +1,25 @@
+.container
+    .row
+        .col-xl-12
+            nav.navbar.navbar-expand-lg.navbar-light.bg-light
+                a.navbar-brand(href='#') Jade starter
+                button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+                    span.navbar-toggler-icon
+                #navbarSupportedContent.collapse.navbar-collapse
+                    ul.navbar-nav.mr-auto
+                        each item,index in nav2
+                            if index==1
+                                li.nav-item.active
+                                    a.nav-link(href=item.link, data-info=item.info)=item.name
+                            else
+                                li.nav-item
+                                    a.nav-link(href=item.link, data-info=item.info)=item.name
+
+                        li.nav-item.dropdown
+                            a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                                | Language
+                            //res.locals.path = req.path;
+                            //res.render('/page');
+                            .dropdown-menu(aria-labelledby='navbarDropdown')
+                                a.dropdown-item(href='about_ru.html') RUS
+                                a.dropdown-item(href='about.html') ENG

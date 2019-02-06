@@ -1,0 +1,29 @@
+// Variables Bootstrap 4
+
+$grid-breakpoints: (
+	// Extra small screen / phone
+	xs: 0,
+	// Small screen / phone
+	sm: 576px,
+	// Medium screen / tablet
+	md: 768px,
+	// Large screen / desktop
+	lg: 992px,
+	// Extra large screen / wide desktop
+	xl: 1200px
+);
+
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1170px
+);
+
+$base: #000000;
+$accent: #f67f00;
+$hover: #ff982a;
+$gray: #4f5457;
+
+$gradient: linear-gradient( 0deg, rgb(59,64,67) 0%, rgb(59,64,67) 48%, rgb(68,74,77) 49%, rgb(88,95,99) 100%);;
+$gradient-gray: linear-gradient( 61deg, rgb(200,200,200) 1%, rgb(245,245,245) 100%);
